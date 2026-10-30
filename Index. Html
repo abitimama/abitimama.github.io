@@ -1,15 +1,774 @@
+Eeyyee 👍 Kana guutuu isaa copy godhi, GitHub keessatti index.html → Edit ✏️ → kan duraa hunda haqi → kana guutuu maxxansi → Commit changes tuqi.
+Writing
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abichuu Coffee Broker</title>
+<meta name="description" content="Abichuu Coffee Broker connects Ethiopian coffee producers, suppliers, exporters and buyers, with a special focus on Guji coffee.">
+<meta name="keywords" content="Ethiopian coffee, Guji coffee, Bule Hora coffee, coffee broker, coffee sourcing, Ethiopia coffee">
+<title>Abichuu Coffee Broker | Guji Ethiopian Coffee</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#302016;line-height:1.7}
-header{background:linear-gradient(90deg,#21150dcc,#21150d88),url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1600') center/cover;color:white;padding:100px 8%;min-height:450px}
-h1{font-size:48px}
-header p{font-size:20px}
-section{padding:50px 8%}
-h2{font-size:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.6;
+color:#2b2118;
+background:#faf8f4;
+}
+
+a{text-decoration:none;color:inherit}
+
+nav{
+position:sticky;
+top:0;
+z-index:10;
+background:#24170f;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 7%;
+box-shadow:0 2px 10px #0002;
+}
+
+.logo{
+font-size:21px;
+font-weight:800;
+}
+
+.logo span{
+color:#d9a441;
+}
+
+nav ul{
+display:flex;
+gap:22px;
+list-style:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#d9a441;
+}
+
+.hero{
+min-height:75vh;
+display:flex;
+align-items:center;
+padding:70px 7%;
+color:white;
+background:
+linear-gradient(#1d120a99,#1d120acc),
+url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1800&q=85')
+center/cover;
+}
+
+.hero-content{
+max-width:780px;
+}
+
+.badge{
+display:inline-block;
+background:#d9a441;
+color:#24170f;
+padding:7px 14px;
+border-radius:20px;
+font-weight:bold;
+font-size:13px;
+margin-bottom:18px;
+}
+
+h1{
+font-size:clamp(42px,7vw,76px);
+line-height:1.03;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+color:#f4eee7;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+.btn{
+padding:13px 20px;
+border-radius:8px;
+font-weight:bold;
+display:inline-block;
+}
+
+.primary{
+background:#d9a441;
+color:#24170f;
+}
+
+.secondary{
+border:1px solid white;
+color:white;
+}
+
+section{
+padding:70px 7%;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:12px;
+color:#302015;
+}
+
+.section-sub{
+text-align:center;
+max-width:760px;
+margin:0 auto 38px;
+color:#6d6259;
+}
+
+.about{
+background:#f1e8dd;
+}
+
+.about-content{
+max-width:1000px;
+margin:auto;
+font-size:17px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:14px;
+box-shadow:0 5px 22px #3a291614;
+border:1px solid #eadfd4;
+}
+
+.card h3{
+margin:12px 0 8px;
+color:#4b2f1e;
+}
+
+.icon{
+font-size:34px;
+}
+
+.product{
+padding:0;
+overflow:hidden;
+}
+
+.product-image{
+height:190px;
+background-size:cover;
+background-position:center;
+}
+
+.product-content{
+padding:24px;
+}
+
+.contact{
+background:#24170f;
+color:white;
+}
+
+.contact .section-title{
+color:white;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.contact-box{
+background:#342319;
+padding:25px;
+border-radius:14px;
+}
+
+.contact-box p{
+margin:10px 0;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25d366;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+font-weight:bold;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:22px;
+background:#170e09;
+color:#cdbfb4;
+font-size:14px;
+}
+
+@media(max-width:750px){
+
+nav ul{
+display:none;
+}
+
+.grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+min-height:78vh;
+padding:55px 7%;
+}
+
+section{
+padding:55px 7%;
+}
+
+h1{
+font-size:48px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+ABICHUU <span>COFFEE BROKER</span>
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#coffee">Coffee</a></li>
+<li><a href="#buyers">Buyers</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<header class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
+GUJI • OROMIA • ETHIOPIA
+</span>
+
+<h1>
+From Guji to Global Markets.
+</h1>
+
+<p>
+Abichuu Coffee Broker connects trusted Ethiopian coffee producers,
+suppliers, exporters and roasters with buyers in Ethiopia and
+international markets.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="https://wa.me/251916377098?text=Hello%20Abichuu%20Coffee%20Broker%2C%20I%20am%20interested%20in%20Ethiopian%20coffee."
+target="_blank">
+WhatsApp Us
+</a>
+
+<a class="btn secondary" href="#coffee">
+Explore Coffee
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section id="about" class="about">
+
+<h2 class="section-title">
+About Abichuu Coffee Broker
+</h2>
+
+<p class="section-sub">
+A trusted connection point for Ethiopian coffee business.
+</p>
+
+<div class="about-content">
+
+<p>
+<strong>Abichuu Coffee Broker</strong> is an Ethiopian coffee sourcing
+and business connection company based in
+<strong>Guji, Oromia, Ethiopia.</strong>
+</p>
+
+<br>
+
+<p>
+We connect reliable coffee producers, suppliers, exporters,
+international buyers and coffee roasters.
+</p>
+
+<br>
+
+<p>
+Our focus is quality Ethiopian coffee, especially coffee from the
+Guji coffee-growing area. We help buyers identify suitable suppliers
+and help suppliers reach new markets through trusted, transparent
+and long-term business relationships.
+</p>
+
+<br>
+
+<p>
+Our vision is to build a strong bridge between the origin of Ethiopian
+coffee and responsible buyers around the world.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="services">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<p class="section-sub">
+Practical support for coffee sourcing, trading and business connections.
+</p>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="icon">☕</div>
+
+<h3>
+Coffee Sourcing
+</h3>
+
+<p>
+We help buyers find suitable Ethiopian coffee suppliers and
+origin-based coffee opportunities, with a special focus on Guji.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🤝</div>
+
+<h3>
+Buyer–Supplier Connection
+</h3>
+
+<p>
+We connect coffee buyers, exporters, producers and suppliers
+to create reliable business opportunities.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🌍</div>
+
+<h3>
+Market Access
+</h3>
+
+<p>
+We support Ethiopian coffee suppliers in reaching new domestic
+and international buyers.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📋</div>
+
+<h3>
+Product Information
+</h3>
+
+<p>
+We help communicate coffee origin, processing method, grade
+and available quantity clearly to interested buyers.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🚚</div>
+
+<h3>
+Trade Coordination
+</h3>
+
+<p>
+We support communication and coordination between parties
+as coffee business discussions move forward.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📈</div>
+
+<h3>
+Business Opportunities
+</h3>
+
+<p>
+We identify and connect legitimate coffee business opportunities
+between local suppliers and market participants.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="coffee" class="about">
+
+<h2 class="section-title">
+Ethiopian Coffee We Connect
+</h2>
+
+<p class="section-sub">
+Ask us about current availability, origin, processing method,
+grade and quantity.
+</p>
+
+
+<div class="grid">
+
+
+<div class="card product">
+
+<div class="product-image"
+style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="product-content">
+
+<h3>
+Guji Coffee
+</h3>
+
+<p>
+Special focus on coffee from Guji, Oromia —
+an important Ethiopian coffee origin.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card product">
+
+<div class="product-image"
+style="background-image:url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="product-content">
+
+<h3>
+Washed Coffee
+</h3>
+
+<p>
+Washed Ethiopian coffee opportunities for buyers seeking
+clean and traceable origin profiles.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card product">
+
+<div class="product-image"
+style="background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80')">
+</div>
+
+<div class="product-content">
+
+<h3>
+Natural Coffee
+</h3>
+
+<p>
+Natural-process Ethiopian coffee opportunities,
+subject to current availability.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="buyers">
+
+<h2 class="section-title">
+For Coffee Buyers
+</h2>
+
+<p class="section-sub">
+Looking for Ethiopian coffee from Guji?
+Send us your requirements.
+</p>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+1. Tell Us What You Need
+</h3>
+
+<p>
+Origin, processing method, grade, quantity, destination
+market and any quality requirements.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+2. We Search the Network
+</h3>
+
+<p>
+We work to identify suitable suppliers and available
+coffee opportunities matching your request.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+3. Start the Conversation
+</h3>
+
+<p>
+We connect interested parties and support clear communication
+for the next stage of the business discussion.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div style="text-align:center;margin-top:32px">
+
+<a class="btn primary"
+href="mailto:Abitimam86@gmail.com?subject=Ethiopian%20Coffee%20Inquiry">
+Send Buyer Inquiry
+</a>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="section-title">
+Why Work With Us?
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+Trusted Connections
+</h3>
+
+<p>
+We focus on serious business relationships and clear communication.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Guji Focus
+</h3>
+
+<p>
+Our origin focus gives us a strong connection to coffee opportunities
+in Guji and surrounding areas.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Global Vision
+</h3>
+
+<p>
+We aim to connect Ethiopian coffee with responsible buyers
+and roasters around the world.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">
+Contact Abichuu Coffee Broker
+</h2>
+
+<p class="section-sub" style="color:#d8cdc3">
+For coffee sourcing, buyer inquiries and business connections.
+</p>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+Business Contact
+</h3>
+
+<p>
+📍 <strong>Location:</strong>
+Guji, Oromia, Ethiopia
+</p>
+
+<p>
+📞 <strong>Phone:</strong>
++251 916 377 098
+</p>
+
+<p>
+✉️ <strong>Email:</strong>
+Abitimam86@gmail.com
+</p>
+
+<a class="whatsapp"
+href="https://wa.me/251916377098"
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+Send Your Coffee Request
+</h3>
+
+<p>
+Are you a buyer looking for Ethiopian coffee?
+</p>
+
+<p>
+Tell us your preferred origin, processing method,
+grade and quantity.
+</p>
+
+<a class="btn primary"
+href="mailto:Abitimam86@gmail.com?subject=Coffee%20Buyer%20Request">
+Email Us
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Abichuu Coffee Broker |
+Ethiopian Coffee Sourcing • Guji, Oromia, Ethiopia
+
+</footer>
+
+</body>
+</html
